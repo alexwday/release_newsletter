@@ -132,7 +132,7 @@ BankPulse creates a standardized aggregation and extraction platform that all em
 ## 🖥️ Demo Interface
 
 <p align="center">
-  <img src="https://github.com/alexwday/release_newsletter/raw/main/demo.png" alt="BankPulse Demo Screenshot" width="800"/>
+  <img src="mockup.png" alt="BankPulse Demo Screenshot" width="800"/>
 </p>
 
 This repository contains a visual mockup demonstrating the user interface and core functionality of BankPulse. To explore the interactive prototype with AI-enhanced features, open `standalone-enhanced.html` in your browser.
