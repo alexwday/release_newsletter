@@ -27,10 +27,6 @@ The lack of a unified approach means valuable insights may be missed, duplicate 
 
 ## 💡 Solution: BankPulse
 
-<p align="center">
-  <img src="https://miro.medium.com/max/1400/1*vLHGbKvj5B-2CuQvyabXUQ.jpeg" alt="Dashboard Concept" width="700"/>
-</p>
-
 BankPulse creates a standardized aggregation and extraction platform that all employees can access to obtain intelligence about competitor banks and industry trends.
 
 ### 🛠️ Key Features
@@ -40,17 +36,17 @@ BankPulse creates a standardized aggregation and extraction platform that all em
     <td width="33%" align="center">
       <img src="https://img.icons8.com/fluency/48/automatic.png" alt="Automated Collection"/><br/>
       <b>Automated Data Collection</b><br/>
-      <small>Centralized scraping of SEDAR filings and financial news</small>
+      <small>Scheduled scraping of SEDAR filings</small>
     </td>
     <td width="33%" align="center">
       <img src="https://img.icons8.com/fluency/48/artificial-intelligence.png" alt="AI Analysis"/><br/>
       <b>AI-Powered Analysis</b><br/>
-      <small>Intelligent summarization and insight extraction</small>
+      <small>Intelligent summarization and insight generation</small>
     </td>
     <td width="33%" align="center">
       <img src="https://img.icons8.com/fluency/48/dashboard.png" alt="Unified Interface"/><br/>
-      <b>Unified Interface</b><br/>
-      <small>Single platform for all competitors' intelligence</small>
+      <b>Weekly Newsletter</b><br/>
+      <small>Regular insights delivered to subscribers</small>
     </td>
   </tr>
 </table>
@@ -65,25 +61,61 @@ BankPulse creates a standardized aggregation and extraction platform that all em
 
 ---
 
-## 🚀 Implementation Roadmap
+## 🚀 Technical Architecture
 
-<p align="center">
-  <img src="https://mermaid.ink/img/pako:eNp1kc1OwzAQhF_F2nOBF8gBkBCHCkTVAwi4WPG6TUzsrewNaaq8O3aSogJ7sj3j-bSa3YiYKRJGFxP41uh8oCXZN96BvDvJgvVmwFg59iVoVK-vBz1PXOiKG5Jmm-UBkMBaE_m-5KoUY8pKtWa-jEDz65AxKV5ov-L68YbJX4-lF3LTrwpZhXZ-SB7QAaQ8tFrS1MsUyQQ9lTl9uBfxL6MaCqGjUl3gzv_9Jc6IQa2sJlb-i1c8bdwxLkbnVqhSbL2l7zsdwWMxcpOzUXgQZmfsqLn4zb4lI8LRjDHfITFl9Eg6q6O9jFWs5PoxJ-EYWwtcYRmHzHcUnj6z8t1f5cQQbMoHkq3pGkQtC-EObJxAhE4fP_kLRsyzFQ?type=png" alt="Implementation Timeline"/>
-</p>
+<table>
+  <tr>
+    <th>Component</th>
+    <th>Technology</th>
+    <th>Purpose</th>
+  </tr>
+  <tr>
+    <td>Data Collection</td>
+    <td>Python scrapers in Dataiku</td>
+    <td>Scheduled scraping of SEDAR files, storing to NAS input folder</td>
+  </tr>
+  <tr>
+    <td>Backend Processing</td>
+    <td>Python/FastAPI in OpenShift</td>
+    <td>Document processing, AI analysis, content generation</td>
+  </tr>
+  <tr>
+    <td>Frontend</td>
+    <td>Maven UI at custom URL</td>
+    <td>Interactive user interface and AI assistant integration</td>
+  </tr>
+  <tr>
+    <td>Data Storage</td>
+    <td>PostgreSQL</td>
+    <td>Structured storage of articles, summaries, and metadata</td>
+  </tr>
+  <tr>
+    <td>Distribution</td>
+    <td>HTML Email Newsletter</td>
+    <td>Weekly distribution to subscribed employees</td>
+  </tr>
+</table>
 
-### Phase 1: SEDAR Core (Weeks 1-4)
-- Focus on regulatory filings and earnings reports from Big 6 Canadian banks
-- Implement initial document processing and summarization
-- Create basic user interface for viewing and filtering content
-- Deploy minimum viable product for internal testing
+---
 
-### Phase 2: Comprehensive SEDAR (Weeks 5-8)
-- Expand to all SEDAR data from Canadian financial institutions
-- Improve AI summarization and insight generation
-- Add categorization, tagging, and prioritization features
-- Enhance UI with visualization components
+## 🗓️ Implementation Roadmap
 
-### Phase 3: Financial Media Integration (Weeks 9-12)
+### Phase 1: SEDAR Core (Weeks 1-6)
+- Implement Python scrapers in Dataiku for Big 6 Canadian banks' regulatory filings and earnings
+- Configure NAS folder structure for scraped data
+- Develop FastAPI backend in OpenShift for document processing and AI summarization
+- Create Maven UI interface for displaying card-based summaries with AI insights
+- Implement weekly HTML newsletter generation and distribution
+- Release MVP for internal testing with select users
+
+### Phase 2: Interactive Intelligence (Weeks 7-12)
+- Enhance Maven UI with AI assistant capabilities
+- Enable users to ask questions about specific releases
+- Implement deeper analysis features and cross-document insights
+- Add personalized content preferences for subscribers
+- Expand coverage to all SEDAR data from Canadian financial institutions
+
+### Phase 3: External Sources (Weeks 13-18)
 - Incorporate financial news sources (Bloomberg, Financial Post, Globe & Mail)
 - Implement cross-source trend identification
 - Add sentiment analysis for content classification
@@ -97,53 +129,20 @@ BankPulse creates a standardized aggregation and extraction platform that all em
 
 ---
 
-## 💻 Technology Approach
-
-<table>
-  <tr>
-    <th>Component</th>
-    <th>Technology</th>
-    <th>Purpose</th>
-  </tr>
-  <tr>
-    <td>Data Collection</td>
-    <td>Python scrapers</td>
-    <td>Gather regulatory filings & news</td>
-  </tr>
-  <tr>
-    <td>AI Processing</td>
-    <td>Large Language Models</td>
-    <td>Summarization & insight generation</td>
-  </tr>
-  <tr>
-    <td>Frontend</td>
-    <td>HTML/CSS/JavaScript</td>
-    <td>Interactive user interface</td>
-  </tr>
-  <tr>
-    <td>Backend</td>
-    <td>Python/Flask API</td>
-    <td>Data processing & business logic</td>
-  </tr>
-  <tr>
-    <td>Data Storage</td>
-    <td>MongoDB</td>
-    <td>Flexible document storage</td>
-  </tr>
-</table>
-
----
-
-## 🖥️ Interactive Demo
+## 🖥️ Demo Interface
 
 <p align="center">
-  <img src="https://github.com/alexwday/release_newsletter/raw/main/demo.png" alt="BankPulse Demo Screenshot" width="700"/>
+  <img src="https://github.com/alexwday/release_newsletter/raw/main/demo.png" alt="BankPulse Demo Screenshot" width="800"/>
 </p>
 
-This repository contains an interactive visual mockup demonstrating the user interface and core functionality of the proposed platform:
+This repository contains a visual mockup demonstrating the user interface and core functionality of BankPulse. To explore the interactive prototype with AI-enhanced features, open `standalone-enhanced.html` in your browser.
 
-1. **Basic UI Demonstration**: Open `index.html` in any browser
-2. **Enhanced AI Features**: Open `standalone-enhanced.html` for a demo with integrated AI insights
+Key interface features include:
+- Tab-based navigation for different financial institutions
+- Content categorization and priority tagging
+- AI-generated insights for key announcements
+- Trend identification across multiple sources
+- Interactive filtering and search capabilities
 
 ---
 
@@ -152,9 +151,9 @@ This repository contains an interactive visual mockup demonstrating the user int
 Upon review of this concept, we propose:
 
 1. **Stakeholder Workshop**: Gather input from potential users across departments
-2. **Technical Assessment**: Evaluate integration requirements with existing systems
-3. **Pilot Program**: Develop Phase 1 with a focused user group
-4. **Iterative Expansion**: Roll out additional phases based on user feedback
+2. **Technical Assessment**: Evaluate OpenShift requirements and PostgreSQL configuration
+3. **Pilot Program**: Begin implementation of Dataiku scrapers and FastAPI backend
+4. **Iterative Expansion**: Roll out additional features based on user feedback
 
 ---
 
